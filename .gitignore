@@ -1,0 +1,13 @@
+### Standard Ignore ###
+*.exe
+*.pdf
+*.docx
+**/.vscode/
+**/.cph/
+
+### Weight Ignore ###
+**/yolov5/
+**/yolov11/
+
+### PlatformIO Ignore ###
+*.pio
