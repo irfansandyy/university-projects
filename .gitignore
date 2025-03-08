@@ -1,3 +1,9 @@
+### No Extension Ignore ###
+*
+!*/
+!*.*
+!Makefile
+
 ### Standard Ignore ###
 *.exe
 *.pdf
