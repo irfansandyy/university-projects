@@ -1,0 +1,22 @@
+# Nama NIK TempatLahir TanggalLahir Agama GolonganDarah
+
+Kiki Amalia 3201012011110011 Denpasar 11-11-2011 Kristen O+
+Lina Marlina 3201012012120012 Balikpapan 12-12-2012 Hindu AB+
+Maman Suherman 3201012013130013 Pontianak 13-01-2013 Buddha A-
+Nina Agustina 3201012014140014 Banjarmasin 14-02-2014 Islam B-
+Oki Setiawan 3201012015150015 Manado 15-03-2015 Kristen O-
+Putu Wijaya 3201012016160016 Mataram 16-04-2016 Hindu AB-
+Rina Suryani 3201012017170017 Jayapura 17-05-2017 Buddha A+
+Susi Susanti 3201012018180018 Ambon 18-06-2018 Islam B+
+Tono Hartono 3201012019190019 Kupang 19-07-2019 Kristen O+
+Umi Kulsum 3201012020200020 Banda Aceh 20-08-2020 Hindu AB+
+Vina Melati 3201012021210021 Palembang 21-09-2021 Islam B+
+Wawan Setiawan 3201012022220022 Surabaya 22-10-2022 Kristen A+
+Xena Pratiwi 3201012023230023 Makassar 23-11-2023 Hindu O-
+Yudi Santoso 3201012024240024 Medan 24-12-2024 Buddha AB+
+Zara Amelia 3201012025250025 Jakarta 25-01-2025 Islam B-
+Andi Wijaya 3201012026260026 Bandung 26-02-2026 Kristen A-
+Budi Hartono 3201012027270027 Semarang 27-03-2027 Hindu O+
+Cici Marlina 3201012028280028 Yogyakarta 28-04-2028 Buddha AB-
+Dedi Suhendar 3201012029290029 Malang 29-05-2029 Islam B+
+Eka Putri 3201012030300030 Solo 30-06-2030 Kristen A+
