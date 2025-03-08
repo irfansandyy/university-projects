@@ -17,9 +17,3 @@
 
 ### PlatformIO Ignore ###
 *.pio
-
-### No Extension Ignore ###
-*
-!*/
-!*.*
-!Makefile
