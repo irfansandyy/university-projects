@@ -8,6 +8,7 @@
 *.exe
 *.pdf
 *.docx
+*.zip
 **/.vscode/
 **/.cph/
 
