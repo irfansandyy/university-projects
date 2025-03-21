@@ -2,7 +2,8 @@
 *
 !*/
 !*.*
-!Makefile
+!makefile
+!crontabs
 
 ### Standard Ignore ###
 *.exe
