@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <ctype.h>
 
+// Stack dengan linked list
 typedef struct node {
     int data;
     struct node *next;

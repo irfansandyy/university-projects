@@ -5,6 +5,7 @@
 #include <ctype.h>
 #define MAX_EQUATION 200
 
+// Stack dengan linked list
 typedef struct node {
     char data;
     struct node *next;
