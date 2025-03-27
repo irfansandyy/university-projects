@@ -1,0 +1,16 @@
+1. Buatlah directory "challenge1"
+2. Masuk ke directory "challenge1" dan buat file berektensi sh bernama "fet.sh" dan "misq.sh"
+3. ⁠Gunakan fet.sh untuk menampilkan tanggal hari ini. (Copas code, isi date, date wajib diisi menggunakan array num.) 
+"num=(1 2 3 4 5 6 7 8 9 0)
+date=
+
+
+echo ""Hari ini tanggal: $date"""
+4. ⁠Gunakan misq.sh untuk menampilkan bulan sekarang ini. (Copas code, isi month, month wajib diisi menggunakan array char.)
+"char=('A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' 'K' 'L' 'M' 'N' 'O' 'P' 'Q' 'R' 'S' 'T' 'U' 'V' 'W' 'X' 'Y' 'Z')
+month=
+
+
+echo ""Sekarang bulan: $month"""
+5. ⁠Run kedua file tersebut setiap 1 menit menggunakan Cronjob! Output ditampilkan dalam file challenge1/Calender.txt
+6. ⁠Dengan menggunakan awk, tampilkan berapa jumlah karakter colon ( : ) yang ada pada file Calender.txt
