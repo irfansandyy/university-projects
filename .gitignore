@@ -11,6 +11,8 @@
 *.docx
 *.zip
 *.o
+*.bin
+*.img
 **/.vscode/
 **/.cph/
 
