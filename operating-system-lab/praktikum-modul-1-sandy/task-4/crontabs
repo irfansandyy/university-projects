@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+*/5 * * * * /bin/bash /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-4/minute5_log.sh
+0 */1 * * * /bin/bash /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-4/agg_5min_to_hour.sh
+0 */1 * * * /bin/bash /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-4/uptime_monitor.sh
+0 0 */1 * * /bin/bash /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-4/cleanup_log.sh

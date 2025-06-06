@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+*/2 * * * * /bin/bash /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-3/automation.sh >> /home/sandy/code/university-projects/Operating-System-Lab-Session/praktikum-modul-1-c13/task-3/cloud_log.txt
