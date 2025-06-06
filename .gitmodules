@@ -1,0 +1,9 @@
+[submodule "operating-system-lab/praktikum-modul-1-c13"]
+	path = operating-system-lab/praktikum-modul-1-c13
+	url = https://github.com/Praktikum-NETICS-2025/praktikum-modul-1-c13.git
+[submodule "operating-system-lab/sisop-modul-2-irfansandyy"]
+	path = operating-system-lab/sisop-modul-2-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/sisop-modul-2-irfansandyy.git
+[submodule "operating-system-lab/sisop-modul-3-irfansandyy"]
+	path = operating-system-lab/sisop-modul-3-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/sisop-modul-3-irfansandyy.git
