@@ -22,7 +22,3 @@
 
 ### PlatformIO Ignore ###
 *.pio
-
-### Sensitive Data Ignore ###
-**/cloud_storage/
-cloud_log.txt
