@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-A = 2.5 # Titik Awal Regula Falsi
-B = 3.5 # Titik AKhir Regula Falsi
-MAX_LINE = 4 # Batas Garis yang akan di cetak di plot
+A = 2.5 # Batas Kiri
+B = 3.5 # Batas Kanan
+MAX_LINE = 4 # Jumlah Garis yang akan di cetak di plot
 MAX_ITERATION = 200 # Maksimal Iterasi
 MAX_TOLERANCE = 1e-12 # Maksimal Toleransi
 GRAPH_TOLERANCE = (B-A)/4 # Jarak Fungsi yang di cetak dari batas awal dan akhir
@@ -60,8 +60,5 @@ def regula_falsi(a, b):
     plt.show()
     return x1
     
-def main():
-    regula_falsi(A, B)
-
 if __name__ == "__main__":
-    main()
+    regula_falsi(A, B)
