@@ -10,3 +10,6 @@
 [submodule "numerical-computation"]
 	path = numerical-computation
 	url = https://github.com/irfansandyy/numerical-computation-practicum.git
+[submodule "operating-system-lab/sisop-modul-4-irfansandyy"]
+	path = operating-system-lab/sisop-modul-4-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/sisop-modul-4-irfansandyy.git
