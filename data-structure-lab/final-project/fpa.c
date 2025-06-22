@@ -5,10 +5,14 @@
 #include <ctype.h>
 #include <termios.h>
 #include <unistd.h>
+
 #define NUMBER_LENGTH 6
 #define NAME_LENGTH 25
 #define TEMP_SIZE 256
 #define ARRAY_DEFAULT_CAPACITY 128
+#define MIN_RECORDS 50
+#define BINARY_FILE "result.bin"
+#define PAGE_SIZE 20
 
 typedef struct component {
     char number[NUMBER_LENGTH+1];
@@ -35,6 +39,11 @@ void delete_component(Component_Array *arr);
 void print_components_with_index(Component_Array *arr);
 void print_components_without_index(Component_Array *arr);
 
+void load_components(Component_Array *arr);
+void save_components(Component_Array *arr);
+void fill_records(Component_Array *arr);
+void pause_screen();
+
 Component_Array components;
 struct termios orig_termios;
 const char *menu_items[] = {
@@ -50,6 +59,8 @@ const int MENU_SIZE = sizeof(menu_items) / sizeof(menu_items[0]);
 int main() {
     set_raw_mode();
     init_component_array(&components);
+    load_components(&components);
+    // fill_records(&components);
     int selected = 0;
     char c;
 
@@ -113,6 +124,12 @@ void clear_screen() {
     printf("\033[2J\033[H");
 }
 
+void pause_screen() {
+    printf("\nTekan ENTER untuk melanjutkan...");
+    while (getchar() != '\n'); 
+    clear_screen();
+}
+
 void print_menu(int selected) {
     clear_screen();
     printf("Gunakan panah atas/bawah atau tekan nomor/karakter untuk memilih:\n\n");
@@ -173,8 +190,8 @@ void add_component(Component_Array *arr) {
         new_comp.number[strcspn(new_comp.number, "\n")] = 0;
 
         if (strlen(new_comp.number) > 0) {
-            for (int i = 0; i < components.size; i++) {
-                if (strncmp(new_comp.number, components.data[i].number, NUMBER_LENGTH+1) == 0) {
+            for (int i = 0; i < arr->size; i++) {
+                if (strncmp(new_comp.number, arr->data[i].number, NUMBER_LENGTH+1) == 0) {
                     valid = true;
                     break;
                 }
@@ -242,21 +259,22 @@ void edit_component(Component_Array *arr) {
     temp[strcspn(temp, "\n")] = 0;
 
     if (strlen(temp) > 0) {
-        for (int i = 0; i < components.size; i++) {
-            if (strncmp(temp, components.data[i].number, NUMBER_LENGTH+1) == 0) {
+        for (int i = 0; i < arr->size; i++) {
+            if (strncmp(temp, arr->data[i].number, NUMBER_LENGTH + 1) == 0) {
                 valid = true;
                 index = i;
-                break;
             }
         }
     }
 
     if (strlen(temp) == 0) {
         printf("Input tidak boleh kosong!\n");
+        pause_screen();
         return;
     }
-    if (valid) {
+    if (!valid) {
         printf("Nomor komponen tidak ada!\n");
+        pause_screen();
         return;
     }
 
@@ -318,21 +336,22 @@ void delete_component(Component_Array *arr) {
     temp[strcspn(temp, "\n")] = 0;
 
     if (strlen(temp) > 0) {
-        for (int i = 0; i < components.size; i++) {
-            if (strncmp(temp, components.data[i].number, NUMBER_LENGTH+1) == 0) {
+        for (int i = 0; i < arr->size; i++) {
+            if (strncmp(temp, arr->data[i].number, NUMBER_LENGTH + 1) == 0) {
                 valid = true;
                 index = i;
-                break;
             }
         }
     }
 
     if (strlen(temp) == 0) {
         printf("Input tidak boleh kosong!\n");
+        pause_screen();
         return;
     }
-    if (valid) {
+    if (!valid) {
         printf("Nomor komponen tidak ada!\n");
+        pause_screen();
         return;
     }
 
@@ -358,12 +377,20 @@ void print_components_with_index(Component_Array *arr) {
         printf("Tidak ada data.\n");
         return;
     }
-    for (int i = 0; i < arr->size; i++) {
-        printf("[%d] Nomer: %s | Nama: %s | Stok: %d | Harga: %.2f\n",
-               i, arr->data[i].number, arr->data[i].name,
-               arr->data[i].stock, arr->data[i].price);
+
+    double total = 0;
+    int count = 0;
+    
+    for(int i = 0; i < arr->size;i++){
+        printf("[%d] Nomor: %s\t | Nama: %s\t | Stok: %d\t | Harga: %.2f\n",
+                i, arr->data[i].number, arr->data[i].name,
+                arr->data[i].stock, arr->data[i].price);
+        total += arr->data[i].stock * arr->data[i].price;
+        count++;
+        
     }
-    getchar();
+    printf("\nTotal nilai aset: Rp %.2f\n", total);
+    pause_screen();
 }
 
 void print_components_without_index(Component_Array *arr) {
@@ -371,10 +398,40 @@ void print_components_without_index(Component_Array *arr) {
         printf("Tidak ada data.\n");
         return;
     }
+    double total = 0;
+    int count = 0;
     for (int i = 0; i < arr->size; i++) {
-        printf("Nomer: %s | Nama: %s | Stok: %d | Harga: %.2f\n",
-               arr->data[i].number, arr->data[i].name,
-               arr->data[i].stock, arr->data[i].price);
+        printf("Nomor: %s\t | Nama: %s\t | Stok: %d\t | Harga: %.2f\n",
+                arr->data[i].number, arr->data[i].name,
+                arr->data[i].stock, arr->data[i].price);
+        total += arr->data[i].stock * arr->data[i].price;
+        count++;
+        
     }
-    getchar();
+    printf("\nTotal nilai aset: Rp %.2f\n", total);
+    pause_screen();
+}
+
+void load_components(Component_Array *arr) {
+    FILE *f = fopen(BINARY_FILE, "rb");
+    if(!f) return; 
+    Component temp;
+    while (fread(&temp, sizeof(Component), 1, f) == 1) {
+        if (arr->size >= arr->capacity) {
+            arr->capacity *= 2;
+            arr->data = realloc(arr->data, arr->capacity * sizeof(Component));
+        }
+        arr->data[arr->size++] = temp;
+    }
+    fclose(f);
+}
+
+void save_components(Component_Array *arr) {
+    FILE *f = fopen(BINARY_FILE, "wb");
+    if (!f) {
+        perror("Gagal menulis file");
+        return;
+    }
+    fwrite(arr->data, sizeof(Component), arr->size, f);
+    fclose(f);
 }
