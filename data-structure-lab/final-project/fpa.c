@@ -12,7 +12,6 @@
 #define ARRAY_DEFAULT_CAPACITY 128
 #define MIN_RECORDS 50
 #define BINARY_FILE "result.bin"
-#define PAGE_SIZE 20
 
 typedef struct component {
     char number[NUMBER_LENGTH+1];
@@ -60,7 +59,7 @@ int main() {
     set_raw_mode();
     init_component_array(&components);
     load_components(&components);
-    // fill_records(&components);
+    fill_records(&components);
     int selected = 0;
     char c;
 
@@ -125,7 +124,7 @@ void clear_screen() {
 }
 
 void pause_screen() {
-    printf("\nTekan ENTER untuk melanjutkan...");
+    printf("\nTekan ENTER untuk melanjutkan");
     while (getchar() != '\n'); 
     clear_screen();
 }
@@ -140,7 +139,7 @@ void print_menu(int selected) {
             printf("  %s\n", menu_items[i]);
     }
     printf("\nPilihan anda sekarang: %d\n", selected + 1);
-    printf("Tekan enter untuk melanjutkan\n");
+    printf("Tekan ENTER untuk melanjutkan\n");
 }
 
 void handle_choice(int choice) {
@@ -242,6 +241,8 @@ void add_component(Component_Array *arr) {
     } while (!valid);
 
     arr->data[arr->size++] = new_comp;
+    save_components(arr);
+    printf("Data berhasil ditambahkan.\n");
 }
 
 void edit_component(Component_Array *arr) {
@@ -319,6 +320,7 @@ void edit_component(Component_Array *arr) {
         } else valid = true;
     } while (!valid);
 
+    save_components(arr);
     printf("Data berhasil diperbarui.\n");
 }
 
@@ -369,6 +371,8 @@ void delete_component(Component_Array *arr) {
             exit(EXIT_FAILURE);
         }
     }
+
+    save_components(arr);
     printf("Data berhasil dihapus.\n");
 }
 
@@ -434,4 +438,19 @@ void save_components(Component_Array *arr) {
     }
     fwrite(arr->data, sizeof(Component), arr->size, f);
     fclose(f);
+}
+
+void fill_records(Component_Array *arr) {
+    while (arr->size < 50) {
+        Component new_comp;
+
+        snprintf(new_comp.number, NUMBER_LENGTH + 1, "ABC%03d", arr->size + 1);
+
+        snprintf(new_comp.name, NAME_LENGTH + 1, "Komponen%d", arr->size + 1);
+
+        new_comp.stock = (arr->size + 1) * 2;
+        new_comp.price = 10000.0 + (arr->size * 500.0);
+
+        arr->data[arr->size++] = new_comp;
+    }
 }
