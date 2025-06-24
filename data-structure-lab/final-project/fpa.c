@@ -393,7 +393,7 @@ void print_components_with_index(Component_Array *arr) {
         count++;
         
     }
-    printf("\nTotal nilai aset: Rp %.2f\n", total);
+    printf("\nTotal komponen: %d\nTotal nilai aset: Rp %.2f\n", count, total);
     pause_screen();
 }
 
@@ -412,7 +412,7 @@ void print_components_without_index(Component_Array *arr) {
         count++;
         
     }
-    printf("\nTotal nilai aset: Rp %.2f\n", total);
+    printf("\nTotal komponen: %d\nTotal nilai aset: Rp %.2f\n", count, total);
     pause_screen();
 }
 
