@@ -16,3 +16,6 @@
 [submodule "operating-system-lab/sisop-final-praktikum-irfansandyy"]
 	path = operating-system-lab/sisop-final-praktikum-irfansandyy
 	url = https://github.com/Praktikum-NETICS-2025/sisop-final-praktikum-irfansandyy.git
+[submodule "artificial-intelligence-concept/problem-turis-romania-irfansandyy"]
+	path = artificial-intelligence-concept/problem-turis-romania-irfansandyy
+	url = https://github.com/kka-e-25/problem-turis-romania-irfansandyy.git
