@@ -19,3 +19,12 @@
 [submodule "artificial-intelligence-concept/problem-turis-romania-irfansandyy"]
 	path = artificial-intelligence-concept/problem-turis-romania-irfansandyy
 	url = https://github.com/kka-e-25/problem-turis-romania-irfansandyy.git
+[submodule "computer-network/jarkom-modul-1-irfansandyy"]
+	path = computer-network/jarkom-modul-1-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-1-irfansandyy.git
+[submodule "artificial-intelligence-concept/tugas-informed-search-irfansandyy"]
+	path = artificial-intelligence-concept/tugas-informed-search-irfansandyy
+	url = https://github.com/kka-e-25/tugas-informed-search-irfansandyy
+[submodule "web-programming/webpro"]
+	path = web-programming/webpro
+	url = https://github.com/irfansandyy/webpro.git

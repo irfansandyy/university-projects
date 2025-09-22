@@ -13,6 +13,7 @@
 *.o
 *.bin
 *.img
+*.class
 **/.vscode/
 **/.cph/
 
