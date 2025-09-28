@@ -39,7 +39,7 @@ public class TicketMachine {
     public void printTicket() {
         if (balance >= price) {
             System.out.println("##################");
-            System.out.println("# The VSCode Line");
+            System.out.println("# The Java Line");
             System.out.println("# Ticket");
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
