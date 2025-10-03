@@ -28,3 +28,6 @@
 [submodule "web-programming/webpro"]
 	path = web-programming/webpro
 	url = https://github.com/irfansandyy/webpro.git
+[submodule "computer-network/jarkom-modul-2-irfansandyy"]
+	path = computer-network/jarkom-modul-2-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-2-irfansandyy.git
