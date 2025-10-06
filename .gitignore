@@ -13,7 +13,6 @@
 *.o
 *.bin
 *.img
-*.class
 **/.vscode/
 **/.cph/
 
@@ -23,3 +22,9 @@
 
 ### PlatformIO Ignore ###
 *.pio
+
+### Java Ignore ###
+*.jar
+*.ctxt
+*.class
+package.bluej

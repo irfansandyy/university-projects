@@ -1,0 +1,234 @@
+{
+  "daftarMahasiswa": [
+    {
+      "nama": "Mochammad Irfan Sandy",
+      "nim": "5025241127",
+      "jurusan": "Teknik Informatika",
+      "krs": [
+        {
+          "kodeMk": "IF221101",
+          "namaMk": "Dasar Pemrograman",
+          "sks": 4,
+          "kapasitas": 100,
+          "dosenPengampu": {
+            "nama": "Dr. Indah Kurnia, M.Kom.",
+            "kodeDosen": "IDK",
+            "nidn": "0012038001"
+          }
+        },
+        {
+          "kodeMk": "IF222103",
+          "namaMk": "Sistem Basis Data",
+          "sks": 3,
+          "kapasitas": 80,
+          "dosenPengampu": {
+            "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+            "kodeDosen": "BBH",
+            "nidn": "0025067502"
+          }
+        }
+      ]
+    },
+    {
+      "nama": "Budi Setiawan",
+      "nim": "5025241128",
+      "jurusan": "Teknik Informatika",
+      "krs": [
+        {
+          "kodeMk": "IF221101",
+          "namaMk": "Dasar Pemrograman",
+          "sks": 4,
+          "kapasitas": 100,
+          "dosenPengampu": {
+            "nama": "Dr. Indah Kurnia, M.Kom.",
+            "kodeDosen": "IDK",
+            "nidn": "0012038001"
+          }
+        },
+        {
+          "kodeMk": "IF222103",
+          "namaMk": "Sistem Basis Data",
+          "sks": 3,
+          "kapasitas": 80,
+          "dosenPengampu": {
+            "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+            "kodeDosen": "BBH",
+            "nidn": "0025067502"
+          }
+        }
+      ]
+    },
+    {
+      "nama": "Citra Ayu Lestari",
+      "nim": "5025241129",
+      "jurusan": "Teknik Informatika",
+      "krs": [
+        {
+          "kodeMk": "IF221101",
+          "namaMk": "Dasar Pemrograman",
+          "sks": 4,
+          "kapasitas": 100,
+          "dosenPengampu": {
+            "nama": "Dr. Indah Kurnia, M.Kom.",
+            "kodeDosen": "IDK",
+            "nidn": "0012038001"
+          }
+        },
+        {
+          "kodeMk": "IF222103",
+          "namaMk": "Sistem Basis Data",
+          "sks": 3,
+          "kapasitas": 80,
+          "dosenPengampu": {
+            "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+            "kodeDosen": "BBH",
+            "nidn": "0025067502"
+          }
+        }
+      ]
+    },
+    {
+      "nama": "Dewi Anggraini",
+      "nim": "5025241001",
+      "jurusan": "Teknik Informatika",
+      "krs": [
+        {
+          "kodeMk": "IF221101",
+          "namaMk": "Dasar Pemrograman",
+          "sks": 4,
+          "kapasitas": 100,
+          "dosenPengampu": {
+            "nama": "Dr. Indah Kurnia, M.Kom.",
+            "kodeDosen": "IDK",
+            "nidn": "0012038001"
+          }
+        },
+        {
+          "kodeMk": "IF222103",
+          "namaMk": "Sistem Basis Data",
+          "sks": 3,
+          "kapasitas": 80,
+          "dosenPengampu": {
+            "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+            "kodeDosen": "BBH",
+            "nidn": "0025067502"
+          }
+        }
+      ]
+    },
+    {
+      "nama": "Eko Prasetyo",
+      "nim": "5025241002",
+      "jurusan": "Teknik Informatika",
+      "krs": [
+        {
+          "kodeMk": "IF221101",
+          "namaMk": "Dasar Pemrograman",
+          "sks": 4,
+          "kapasitas": 100,
+          "dosenPengampu": {
+            "nama": "Dr. Indah Kurnia, M.Kom.",
+            "kodeDosen": "IDK",
+            "nidn": "0012038001"
+          }
+        },
+        {
+          "kodeMk": "IF222103",
+          "namaMk": "Sistem Basis Data",
+          "sks": 3,
+          "kapasitas": 80,
+          "dosenPengampu": {
+            "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+            "kodeDosen": "BBH",
+            "nidn": "0025067502"
+          }
+        }
+      ]
+    }
+  ],
+  "daftarDosen": [
+    {
+      "nama": "Dr. Indah Kurnia, M.Kom.",
+      "kodeDosen": "IDK",
+      "nidn": "0012038001"
+    },
+    {
+      "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+      "kodeDosen": "BBH",
+      "nidn": "0025067502"
+    },
+    {
+      "nama": "Ahmad Rizal, S.Kom., M.Cs.",
+      "kodeDosen": "AHR",
+      "nidn": "0015098803"
+    }
+  ],
+  "daftarMataKuliah": [
+    {
+      "kodeMk": "IF221101",
+      "namaMk": "Dasar Pemrograman",
+      "sks": 4,
+      "kapasitas": 100,
+      "dosenPengampu": {
+        "nama": "Dr. Indah Kurnia, M.Kom.",
+        "kodeDosen": "IDK",
+        "nidn": "0012038001"
+      }
+    },
+    {
+      "kodeMk": "IF221102",
+      "namaMk": "Struktur Data",
+      "sks": 4,
+      "kapasitas": 80,
+      "dosenPengampu": {
+        "nama": "Dr. Indah Kurnia, M.Kom.",
+        "kodeDosen": "IDK",
+        "nidn": "0012038001"
+      }
+    },
+    {
+      "kodeMk": "IF222103",
+      "namaMk": "Sistem Basis Data",
+      "sks": 3,
+      "kapasitas": 80,
+      "dosenPengampu": {
+        "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+        "kodeDosen": "BBH",
+        "nidn": "0025067502"
+      }
+    },
+    {
+      "kodeMk": "IF222204",
+      "namaMk": "Jaringan Komputer",
+      "sks": 3,
+      "kapasitas": 50,
+      "dosenPengampu": {
+        "nama": "Prof. Dr. Bambang Hartono, S.T., M.T.",
+        "kodeDosen": "BBH",
+        "nidn": "0025067502"
+      }
+    },
+    {
+      "kodeMk": "IF223101",
+      "namaMk": "Rekayasa Perangkat Lunak",
+      "sks": 4,
+      "kapasitas": 70,
+      "dosenPengampu": {
+        "nama": "Ahmad Rizal, S.Kom., M.Cs.",
+        "kodeDosen": "AHR",
+        "nidn": "0015098803"
+      }
+    },
+    {
+      "kodeMk": "IF223202",
+      "namaMk": "Konsep Kecerdasan Artifisial",
+      "sks": 3,
+      "kapasitas": 70,
+      "dosenPengampu": {
+        "nama": "Ahmad Rizal, S.Kom., M.Cs.",
+        "kodeDosen": "AHR",
+        "nidn": "0015098803"
+      }
+    }
+  ]
+}
