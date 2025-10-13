@@ -31,3 +31,6 @@
 [submodule "computer-network/jarkom-modul-2-irfansandyy"]
 	path = computer-network/jarkom-modul-2-irfansandyy
 	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-2-irfansandyy.git
+[submodule "artificial-intelligence-concept/problem-kota-sirkuler-irfansandyy"]
+	path = artificial-intelligence-concept/problem-kota-sirkuler-irfansandyy
+	url = https://github.com/kka-e-25/problem-kota-sirkuler-irfansandyy.git
