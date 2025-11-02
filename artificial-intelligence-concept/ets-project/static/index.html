@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Sudoku Solver</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Sudoku Solver (CSP & Min-Conflicts)</h1>
+    <div id="controls">
+      <button id="btn-random">Load Random Puzzle</button>
+      <button id="btn-clear">Clear</button>
+      <select id="algo">
+        <option value="csp">CSP Backtracking</option>
+        <option value="minconflict">Min-Conflicts</option>
+      </select>
+      <button id="btn-solve">Solve</button>
+      <label><input type="checkbox" id="step-toggle" checked> Step-by-step</label>
+      <label>Delay (ms): <input id="delay" type="number" value="200" min="10" step="10"/></label>
+    </div>
+
+    <div id="board"></div>
+
+    <div id="play-controls" style="display:none">
+      <button id="btn-play">Play</button>
+      <button id="btn-pause">Pause</button>
+      <button id="btn-step">Next Step</button>
+      <div id="status"></div>
+    </div>
+
+    <pre id="log"></pre>
+  </div>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -34,3 +34,9 @@
 [submodule "artificial-intelligence-concept/problem-kota-sirkuler-irfansandyy"]
 	path = artificial-intelligence-concept/problem-kota-sirkuler-irfansandyy
 	url = https://github.com/kka-e-25/problem-kota-sirkuler-irfansandyy.git
+[submodule "computer-network/jarkom-modul-3-irfansandyy"]
+	path = computer-network/jarkom-modul-3-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-3-irfansandyy.git
+[submodule "artificial-intelligence-concept/kka-warehouse-robot"]
+	path = artificial-intelligence-concept/kka-warehouse-robot
+	url = https://github.com/irfansandyy/kka-warehouse-robot.git

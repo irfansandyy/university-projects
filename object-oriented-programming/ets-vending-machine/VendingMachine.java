@@ -96,7 +96,7 @@ public class VendingMachine {
                     while(removing) {
                         transaction.printReceipt();
                         System.out.print("Pilih dari (1 - " + transaction.getProductCount() + ") ketik 0 untuk balik ke menu: ");
-                        menuSelection = scanner.nextInt();
+                        menuSelection = scanner.nextInt(); 
                         if(menuSelection < 0 || menuSelection > transaction.getProductCount()) {
                             System.out.println("Pilihan tidak valid, silahkan coba lagi");
                             continue;
