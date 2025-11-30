@@ -40,3 +40,6 @@
 [submodule "artificial-intelligence-concept/kka-warehouse-robot"]
 	path = artificial-intelligence-concept/kka-warehouse-robot
 	url = https://github.com/irfansandyy/kka-warehouse-robot.git
+[submodule "computer-network/jarkom-modul-4-irfansandyy"]
+	path = computer-network/jarkom-modul-4-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-4-irfansandyy.git
