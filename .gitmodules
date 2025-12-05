@@ -43,3 +43,6 @@
 [submodule "computer-network/jarkom-modul-4-irfansandyy"]
 	path = computer-network/jarkom-modul-4-irfansandyy
 	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-4-irfansandyy.git
+[submodule "computer-network/jarkom-modul-final-irfansandyy"]
+	path = computer-network/jarkom-modul-final-irfansandyy
+	url = https://github.com/Praktikum-NETICS-2025/jarkom-modul-final-irfansandyy.git
